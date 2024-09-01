@@ -3,7 +3,6 @@
 # Load stuff from .env file
 [ ! -f .env ] || export $(grep -v '^#' .env | xargs)
 
-
 # Static Configuration
 TIMESTAMP=`date "+%Y-%m-%dT%H:%M:%S"`
 
