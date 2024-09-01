@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Configuration
-IP=192.168.0.11
-TIMESTAMP=`date "+%Y-%m-%dT%H:%M:%S"`
+# Load stuff from .env file
+[ ! -f .env ] || export $(grep -v '^#' .env | xargs)
 
-Gotify_URL="https://xxx.domain.tld"
-Gotify_Token="xxxxx"
+
+# Static Configuration
+TIMESTAMP=`date "+%Y-%m-%dT%H:%M:%S"`
 
 notify()
 {
